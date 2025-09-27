@@ -1,10 +1,11 @@
 import React from 'react';
 import { Stethoscope, Video, Clock, CheckCircle, Phone, Calendar } from 'lucide-react';
+import Tilt from "react-parallax-tilt";
 
 const Services = () => {
   const consultationTypes = [
     {
-      icon: <Stethoscope className="h-8 w-8 text-blue-600" />,
+      icon: <Stethoscope className="h-8 w-8 text-[#082567]" />,
       title: "In-Clinic Consultation",
       description: "Personal consultation at our Kolkata clinic",
       features: [
@@ -17,7 +18,7 @@ const Services = () => {
       price: "Contact for pricing"
     },
     {
-      icon: <Video className="h-8 w-8 text-emerald-600" />,
+      icon: <Video className="h-8 w-8 text-[#FFB300]" />,
       title: "Online Video Consultation",
       description: "Convenient virtual consultations from home",
       features: [

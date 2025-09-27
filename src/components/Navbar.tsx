@@ -123,20 +123,20 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50 border-b border-gray-100">
+    <nav className="bg-white shadow-lg sticky top-0 z-50 border-b border-gray-100 backdrop-blur-sm bg-white/95">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Logo - More prominent */}
-          <Link to="/" className="flex items-center space-x-3 group">
-            <div className="bg-gradient-to-br from-emerald-500 to-blue-600 p-2 rounded-xl group-hover:scale-105 transition-transform">
-              <Heart className="h-7 w-7 text-white" />
+          {/* Logo - 3D Brand Anchor */}
+          <Link to="/" className="flex items-center space-x-3 group transform-3d">
+            <div className="group-hover:scale-110 transition-all duration-300 card-3d p-2">
+              <img src="/logo.jpeg" alt="Tiwari Clinic Logo" className="h-12 w-auto" />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors">
-                Health with
+              <h1 className="text-xl font-bold text-[#082567] group-hover:text-[#FFB300] transition-colors">
+                Tiwari Clinics
               </h1>
-              <p className="text-sm text-emerald-600 font-medium -mt-1">
-                Electro Homoeopathy
+              <p className="text-sm text-[#FFB300] font-medium -mt-1">
+                Health with Electro Homoeopathy
               </p>
             </div>
           </Link>
@@ -149,11 +149,11 @@ const Navbar = () => {
                 to={link.path}
                 className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
                   location.pathname === link.path
-                    ? 'text-blue-600 bg-blue-50 border-b-2 border-blue-600'
-                    : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                    ? 'text-[#082567] bg-blue-50 border-b-2 border-[#082567]'
+                    : 'text-[#334155] hover:text-[#082567] hover:bg-gray-50'
                 } ${
                   link.label === 'Book Appointment'
-                    ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800 shadow-md'
+                    ? 'btn-3d btn-accent'
                     : ''
                 }`}
               >
@@ -165,7 +165,7 @@ const Navbar = () => {
             <div className="relative">
               <button
                 onClick={() => setDropdownOpen(!dropdownOpen)}
-                className="flex items-center space-x-1 px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors"
+                className="flex items-center space-x-1 px-4 py-2 text-sm font-medium text-[#334155] hover:text-[#082567] hover:bg-gray-50 rounded-lg transition-colors"
               >
                 <span>More</span>
                 <ChevronDown className={`h-4 w-4 transition-transform ${dropdownOpen ? 'rotate-180' : ''}`} />
@@ -178,7 +178,7 @@ const Navbar = () => {
                       key={link.path}
                       to={link.path}
                       onClick={() => setDropdownOpen(false)}
-                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors"
+                      className="block px-4 py-3 text-sm text-[#334155] hover:bg-gray-50 hover:text-[#082567] transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -187,10 +187,10 @@ const Navbar = () => {
               )}
             </div>
 
-            {/* Call button - More prominent */}
+            {/* Call button - 3D CTA */}
             <a
               href="tel:9831339955"
-              className="flex items-center space-x-2 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-6 py-2.5 rounded-xl hover:from-emerald-600 hover:to-emerald-700 transition-all duration-200 shadow-md hover:shadow-lg ml-4"
+              className="btn-3d flex items-center space-x-2 ml-4"
             >
               <Phone className="h-4 w-4" />
               <span className="font-medium">Call Now</span>
@@ -205,11 +205,11 @@ const Navbar = () => {
                 to={link.path}
                 className={`px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
                   location.pathname === link.path
-                    ? 'text-blue-600 bg-blue-50'
-                    : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                    ? 'text-[#082567] bg-blue-50'
+                    : 'text-[#334155] hover:text-[#082567] hover:bg-gray-50'
                 } ${
                   link.label === 'Book Appointment'
-                    ? 'bg-blue-600 text-white hover:bg-blue-700'
+                    ? 'btn-3d btn-accent'
                     : ''
                 }`}
               >
@@ -220,7 +220,7 @@ const Navbar = () => {
             <div className="relative">
               <button
                 onClick={() => setDropdownOpen(!dropdownOpen)}
-                className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg"
+                className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-[#334155] hover:text-[#082567] hover:bg-gray-50 rounded-lg"
               >
                 <span>More</span>
                 <ChevronDown className={`h-4 w-4 ${dropdownOpen ? 'rotate-180' : ''}`} />
@@ -233,7 +233,7 @@ const Navbar = () => {
                       key={link.path}
                       to={link.path}
                       onClick={() => setDropdownOpen(false)}
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600"
+                      className="block px-4 py-2 text-sm text-[#334155] hover:bg-gray-50 hover:text-[#082567]"
                     >
                       {link.label}
                     </Link>
@@ -244,7 +244,7 @@ const Navbar = () => {
 
             <a
               href="tel:9831339955"
-              className="flex items-center space-x-2 bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700 ml-2"
+              className="btn-3d flex items-center space-x-2 ml-2"
             >
               <Phone className="h-4 w-4" />
               <span>Call</span>
@@ -255,7 +255,7 @@ const Navbar = () => {
           <div className="lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 p-2 rounded-lg transition-colors"
+              className="text-[#334155] hover:text-[#082567] focus:outline-none focus:ring-2 focus:ring-[#082567] focus:ring-offset-2 p-2 rounded-lg transition-colors"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -273,8 +273,8 @@ const Navbar = () => {
                   onClick={() => setIsOpen(false)}
                   className={`block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200 ${
                     location.pathname === link.path
-                      ? 'text-blue-600 bg-blue-50 border-l-4 border-blue-600'
-                      : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                      ? 'text-[#082567] bg-blue-50 border-l-4 border-[#082567]'
+                      : 'text-[#334155] hover:text-[#082567] hover:bg-gray-50'
                   }`}
                 >
                   {link.label}
@@ -282,7 +282,7 @@ const Navbar = () => {
               ))}
               <a
                 href="tel:9831339955"
-                className="flex items-center space-x-2 mx-4 mt-4 px-4 py-3 bg-emerald-600 text-white rounded-lg font-medium hover:bg-emerald-700 transition-colors"
+                className="btn-3d flex items-center space-x-2 mx-4 mt-4"
               >
                 <Phone className="h-4 w-4" />
                 <span>Call: 9831339955</span>
