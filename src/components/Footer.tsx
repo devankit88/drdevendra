@@ -82,7 +82,7 @@ const Footer = () => {
           <p className="text-gray-300 text-sm">
             © 2024 Health with Electro Homoeopathy. All rights reserved. 
             <span className="block md:inline mt-1 md:mt-0 md:ml-2">
-              EH Dr. Devendra Tiwari (BEMS) - Registered Practitioner
+               Dr. Devendra Tiwari  - Registered Practitioner
             </span>
           </p>
         </div>
